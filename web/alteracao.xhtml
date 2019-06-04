@@ -12,7 +12,7 @@
     </head>
     <body jsf:id="body">
         <form jsf:id="form" jsf:prependId="false">
-            <h3>Listagem de Clientes</h3>
+            <h3>Listagem de Impressão</h3>
             <table class="table table-striped table-hover">
                  <tr>
                      <td>Nome</td>
@@ -20,40 +20,40 @@
                      <td>Endereço</td>
                      <td>Cidade</td>
                  </tr>
-                 <ui:repeat var="cliente" value="#{clienteBean.list()}" >
+                 <ui:repeat var="cliente" value="#{impressaoBean.list()}" >
                     <tr>
                       <td >
-                        <a href="#" jsf:action="#{clienteBean.setCliente(cliente)}">
+                        <a href="#" jsf:action="#{impressaoBean.setImpressao(impressao)}">
                              #{cliente.nome}
                         </a>
                       </td>
-                      <td>#{cliente.email}</td>
-                      <td>#{cliente.endereco}</td>
-                      <td>#{cliente.cidade}</td>
+                      <td>#{impressao.email}</td>
+                      <td>#{impressao.endereco}</td>
+                      <td>#{impressao.cidade}</td>
                      </tr>
                   </ui:repeat>
             </table>
             <br/><br/>
-            <h3>Cliente</h3>
+            <h3>Impressão</h3>
             <label> Nome: </label>
             <input type="text" jsf:id="nome" class="form-control"
-                   jsf:value="#{clienteBean.cliente.nome}" />
+                   jsf:value="#{impressaoBean.impressao.nome}" />
             <br />
             <label> Endereço: </label>
             <input type="text" jsf:id="endereco" class="form-control"
-                   jsf:value="#{clienteBean.cliente.endereco}" />
+                   jsf:value="#{impressaoBean.impressao.endereco}" />
             <br />
             <label> Cidade: </label>
             <input type="text" jsf:id="cidade" class="form-control"
-                   jsf:value="#{clienteBean.cliente.cidade}" />
+                   jsf:value="#{impressaoBean.impressao.cidade}" />
             <br />
             <label> Email: </label>
             <input type="text" jsf:id="email" class="form-control"
-                   jsf:value="#{clienteBean.cliente.email}" />
+                   jsf:value="#{impressaoBean.impressao.email}" />
             <br /><br />
             <a href="#" class="btn btn-primary" 
                style="margin-right:10px;"
-               jsf:action="#{clienteBean.update()}">Alterar</a>
+               jsf:action="#{impressaoBean.update()}">Alterar</a>
                
             <a href="#" class="btn btn-danger"
                jsf:action="#{clienteBean.delete()}">Apagar</a>

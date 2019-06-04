@@ -4,7 +4,7 @@
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <head jsf:id="head">
-        <title>Manipulação de Cliente</title>
+        <title>Manipulação de Impressões</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -13,15 +13,15 @@
     </head>
     <body jsf:id="body">
         <form jsf:id="form" jsf:prependId="false">
-          <h3>Listagem de Clientes</h3>
+          <h3>Listagem de Impressões</h3>
           
           <div class="dropdown"><!-- Dropdown -->
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                 Contatos
               </button>
               <div class="dropdown-menu">
-                  <ui:repeat var="c" value="#{clienteBean.list()}" >
-                      <a class="dropdown-item" href="#" jsf:action="#{clienteBean.setCliente(c)}">
+                  <ui:repeat var="c" value="#{impressaoBean.list()}" >
+                      <a class="dropdown-item" href="#" jsf:action="#{impressaoBean.setImpressao(c)}">
                           #{c.nome}
                       </a>
                   </ui:repeat>
@@ -30,29 +30,29 @@
 
             
             <br/><br/>
-            <h3>Cliente</h3>
+            <h3>Impressões</h3>
             <label> Nome: </label>
             <input type="text" jsf:id="nome" class="form-control"
-                   jsf:value="#{clienteBean.cliente.nome}" />
+                   jsf:value="#{impressaoBean.cliente.nome}" />
             <br />
             <label> Endereço: </label>
             <input type="text" jsf:id="endereco" class="form-control"
-                   jsf:value="#{clienteBean.cliente.endereco}" />
+                   jsf:value="#{impressaoBean.cliente.endereco}" />
             <br />
             <label> Cidade: </label>
             <input type="text" jsf:id="cidade" class="form-control"
-                   jsf:value="#{clienteBean.cliente.cidade}" />
+                   jsf:value="#{impressaoBean.cliente.cidade}" />
             <br />
             <label> Email: </label>
             <input type="text" jsf:id="email" class="form-control"
-                   jsf:value="#{clienteBean.cliente.email}" />
+                   jsf:value="#{impressaoBean.cliente.email}" />
             <br /><br />
             <a href="#" class="btn btn-primary" 
                style="margin-right:10px;"
-               jsf:action="#{clienteBean.update()}">Alterar</a>
+               jsf:action="#{impressaoBean.update()}">Alterar</a>
                
             <a href="#" class="btn btn-danger"
-               jsf:action="#{clienteBean.delete()}">Apagar</a>
+               jsf:action="#{impressaoBean.delete()}">Apagar</a>
         </form>
     </body>
 </html>
