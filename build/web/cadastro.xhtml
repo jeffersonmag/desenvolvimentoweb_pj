@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Cadastro de Clientes</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Cadastro de Clientes</h2>
+            Nome:
+            <h:inputText value="#{clienteBean.cliente.nome}" />
+            <br /><br />
+            Endereço:
+            <h:inputText value="#{clienteBean.cliente.endereco}" />
+            <br /><br />
+            Cidade:
+            <h:inputText value="#{clienteBean.cliente.cidade}" />
+            <br /><br />
+            Email:
+            <h:inputText value="#{clienteBean.cliente.email}" />
+            <br /><br />
+            <h:commandButton value="Salvar" 
+                             action="#{clienteBean.save()}" />
+                             
+        </h:form>
+    </h:body>
+</html>
+
