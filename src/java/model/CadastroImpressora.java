@@ -11,22 +11,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cadusuarioimp")
-public class Impressao implements Serializable{
+@Table(name="cadimpressora")
+public class CadastroImpressora implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name="id")
+    @Column(name="id")    
     private Integer id;
-    @Column(name="nome")
-    private String nome;
-    @Column(name="cpf")
-    private String cpf;
-    @Override
-    public String toString(){
-        return "ID:"+id+" - Nome:"+nome+" - CPF:"+cpf;
-    }
+    @Column(name="impressora")
+    private String impressora;
+    @Column(name="ip")
+    private String ip;
 
     public Integer getId() {
         return id;
@@ -36,33 +32,20 @@ public class Impressao implements Serializable{
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getImpressora() {
+        return impressora;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setImpressora(String impressora) {
+        this.impressora = impressora;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getIp() {
+        return ip;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
-    
+   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

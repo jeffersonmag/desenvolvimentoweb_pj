@@ -11,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import model.Impressao;
 
+
 @ManagedBean
 @ViewScoped
 public class ImpressaoBean {
@@ -54,8 +55,8 @@ public class ImpressaoBean {
         return impressao;
     }
 
-    public void setImpressao(Impressao cliente) {
-        this.impressao = cliente;
+    public void setImpressao(Impressao impressao) {
+        this.impressao = impressao;
     }
        public List<Impressao> list(){
         ImpressaoJpaController dao = new ImpressaoJpaController(emf);
