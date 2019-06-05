@@ -74,7 +74,7 @@ public class ImpressaoJpaController implements Serializable {
                 impressao = em.getReference(Impressao.class, id);
                 impressao.getId();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The cliente with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The impressao with id " + id + " no longer exists.", enfe);
             }
             em.remove(impressao);
             em.getTransaction().commit();

@@ -21,15 +21,11 @@ public class Impressao implements Serializable{
     private Integer id;
     @Column(name="nome")
     private String nome;
-    @Column(name="endereco")
-    private String endereco;
-    @Column(name="cidade")
-    private String cidade;
-    @Column(name="email")
-    private String email;
+    @Column(name="cpf")
+    private String cpf;
     @Override
     public String toString(){
-        return "ID:"+id+" - Nome:"+nome+" - Email:"+email;
+        return "ID:"+id+" - Nome:"+nome+" - CPF:"+cpf;
     }
 
     public Integer getId() {
@@ -48,30 +44,13 @@ public class Impressao implements Serializable{
         this.nome = nome;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    
     
 }
 

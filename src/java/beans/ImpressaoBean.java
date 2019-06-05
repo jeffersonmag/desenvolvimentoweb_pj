@@ -32,7 +32,7 @@ public class ImpressaoBean {
         try {
             dao.edit(impressao);
         } catch (Exception ex) {
-            Logger.getLogger(ClienteBean.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ImpressaoBean.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

@@ -17,7 +17,7 @@
           
           <div class="dropdown"><!-- Dropdown -->
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Contatos
+                Usuários para impressão
               </button>
               <div class="dropdown-menu">
                   <ui:repeat var="c" value="#{impressaoBean.list()}" >
@@ -33,19 +33,12 @@
             <h3>Impressões</h3>
             <label> Nome: </label>
             <input type="text" jsf:id="nome" class="form-control"
-                   jsf:value="#{impressaoBean.cliente.nome}" />
+                   jsf:value="#{impressaoBean.impressao.nome}" />
             <br />
-            <label> Endereço: </label>
-            <input type="text" jsf:id="endereco" class="form-control"
-                   jsf:value="#{impressaoBean.cliente.endereco}" />
-            <br />
-            <label> Cidade: </label>
-            <input type="text" jsf:id="cidade" class="form-control"
-                   jsf:value="#{impressaoBean.cliente.cidade}" />
-            <br />
-            <label> Email: </label>
-            <input type="text" jsf:id="email" class="form-control"
-                   jsf:value="#{impressaoBean.cliente.email}" />
+            <label> CPF: </label>
+            <input type="text" jsf:id="cpf" class="form-control"
+                   jsf:value="#{impressaoBean.impressao.cpf}" />
+
             <br /><br />
             <a href="#" class="btn btn-primary" 
                style="margin-right:10px;"
